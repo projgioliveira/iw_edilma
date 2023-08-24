@@ -2,105 +2,79 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela 1</title>
-    <!--ESTILO-->
-<style>
-body{
-    font-family: Arial, Helvetica, sans-serif;
-}
-table{
-    width: 500px;
-    border-collapse: collapse;
-}
-td, th{
-    border: 1px;
-    padding: 10px;
-}
-caption{
-    font-size: 22px;
-    font-weight: bold;
-    padding: 10px;
-    background-color: rgba(4, 0, 8, 0);
-}
-thead, tfoot{
-    background-color: darkcyan;
-    color: white;
-}
-tbody > tr:nth-child(odd){ 
-    background-color: aliceblue;
-}
-tbody > tr:nth-child(even){
-    background-color: white;
-}
-td.num {
-    text-align: right;
-}
+    <title>Tabela 3</title>
 
+         <!----------ESTILO--------->
+         <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif; /*TIPO DA FONTE*/
+            }
+    
+            table {
+                width: 400px; /*LARGURA DA TABELA*/
+                border-collapse: collapse; /*ELIMINA ESPAÇO ENTRE AS CÉLULAS*/
+            }
+    
+            td, th {
+                border: 1px solid black; /*EXPESSURA E ESTILO DA BORDA DAS CÉLULAS*/
+                padding: 10px; /*DISTÂNCIA ENTRE E CONTEÚDO E AS BORDAS */
+                text-align: center; /*ALINHAMENTO DO TEXTO*/
+                
+            }
+    
+            caption {
+                font-size: 22px; /*TAMANHO DA FONTE DO TÍTULO DA TABELA*/
+                font-weight: bold; /*PESO OU INTENSIDADE DA FONTE*/
+                padding: 10px; /*DISTÂNCIA ENTRE O CONTEÚDO E AS BORDAS*/
+                background-color: rgb(250, 255, 195); /*COR DO FUNDO DO TÍTULO DA TABELA*/
+            }
+    
+            thead, tfoot {
+                background-color: #ffffff; /*COR DO FUNDO DO CABEÇALHO E RODAPÈ DA TABELA*/
+                color: rgb(250, 255, 195); /*COR DA FONTE*/
+            }
+    
+            tbody > tr:nth-child(odd) { /*LINHAS ÍMPARES*/
+                background-color: rgb(255, 195, 243); /*COR DE FUNDO DA LINHA*/
+            }
+    
+            tbody > :nth-child(even) { /*LINHAS PARES*/
+                background-color: rgb(195, 228, 255); /*COR DE FUNDO DA LINHA*/
+            }
+    
+            td.num {
+                text-align: center; /*ALINHAMENTO DO TEXTO DA CLASSE "NUM"*/
+            }
 
-</style>
-
+        </style>
+    
+        <!-----FIM ESTILO----->
 </head>
 <body>
-  <h1>ESTRUTURA DE TABELAS GRANDES</h1> 
-<!--
-ANATOMIA DE TABELAS GRANDES
-TABLE
-     CAPTION
-             THEAD
-               tr(tabel row), td (tabel data), th (tabel head)
-             TBODY
-               tr (tabel row), td (tabel data), th (tabel head)
-            TFOOT
-           v   tr (table row), td (tabel data), th (tabel head)
+    <h1>MESCLAGEM DE CÉLULAS</h1>  
 
--->
+        <table>
 
-  <table>
-   <caption>POPULAÇÃO DOS ESTADOS</caption>
-   
-   <thead>
-    <tr>
-        <th colspan="2">SUDESTE</th>
-    </tr>
+            <tr>
+                <td>A</td>
+                <th colspan="2">B</th>
+            </tr>
 
-    <tr>
-        <th>Estado</th>
-        <th style="width: 50px;">Quantidade</th>
-    </tr>
-   </thead>
-   
-   <tbody>
-    <tr>
-        <td>São Paulo</td>
-        <td class="num">44 milhões</td>
-    </tr>
+            <tr>
+                <th rowspan="3">C</th>
+                <td>D</td>
+                <th rowspan="2">E</th>
+            </tr>
 
-    <tr>
-        <td>Minas Gerais</td>
-        <td class="num">20 milhões</td>
-    </tr>
-    <tr>
-        <td>Rio de janeiro</td>
-        <td class="num">16 milhões</td>
-    </tr>
-    <tr>
-        <td>Espírito Santo</td>
-        <td class="num">4 milhões</td>
-    </tr>
- </tbody>
+            <tr>
+                <td>F</td>
+            </tr>
 
- <tfoot>
-    <tr>
-        <th>Total de Habitantes</th>
-        <td class="num"><strong>84 milhões</strong></td>
-    </tr>
- </tfoot>
-
-</table>
-  
-
-
-
+            <tr>
+                <th colspan="2">G</th>
+            </tr>
+        </table>
 </body>
 </html>
